@@ -9,41 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); font-family: 'Rubik', sans-serif;}
-    .color{
-      color: #5847eb;
-      color: #ff8c66;
-      color: #56c2e6;
-      color: #ff5c7c;
-      color: #4acf81;
-      color: #7536d3;
-      color: #f1c65b;
-      color: #0f1424;
-      color: #1c1f4a;
-      color: #6f76c8;
-      color: #bdc1ff
-    }
-  </style>
+  
 </head>
-<body class="bg-[#0f1424] mt-[150px] font-['Rubik']">
-  <section class="w-8/12 m-auto flex gap-[20px] items-center mb-6">
-    <div class="flex flex-col bg-[#1c1f4a] rounded-xl w-[190px]">
-      <div class="bg-[#5847eb] rounded-xl px-6 py-8">
-        <img src="images/image-jeremy.png" alt="" class="w-16 border-2 border-white rounded-full mb-8">
-        <h4 class="text-[#bdc1ff] text-[11px]">Report for</h4>
-        <p class="text-[30px] text-[#fff] mb-16 leading-none font-[300] w-5/12">Jeremy Robson</p>
+<body class="bg-[#0f1424] mt-[150px] font-['Rubik'] body">
+  <section class="w-8/12 m-auto flex gap-[20px] items-center mb-6 sections section1">
+    <div class="flex flex-col bg-[#1c1f4a] rounded-xl w-[190px] section1">
+      <div class="bg-[#5847eb] rounded-xl px-6 py-8 section1 section2">
+        <img src="images/image-jeremy.png" alt="" class="w-20 border-2 border-white rounded-full mb-8 style1">
+        <div class="sections">
+          <h4 class="text-[#bdc1ff] text-[11px]">Report for</h4>
+          <p class="text-[27px] text-[#fff] mb-16 leading-none font-[300] w-5/12 section1 style">Jeremy Robson</p>
+        </div>
+        
       </div>
-      <div class="p-6 flex flex-col items-start gap-6">
+      <div class="p-6 flex flex-col items-start gap-6 section1 style2">
         <button id="dailyToggle" class="text-[#6f76c8] hover:text-white">Daily</button>
         <button id="weeklyToggle" class="text-[#6f76c8] hover:text-white">Weekly</button>
-        <button id="monthlyToogle" class="text-[#6f76c8] hover:text-white">Monthly</button>
+        <button id="monthlyToggle" class="text-[#6f76c8] hover:text-white">Monthly</button>
       </div>
     </div>
-    <section id="daily" class="flex flex-col gap-[20px]">
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
+    <section id="daily" class="flex flex-col gap-[20px] section1">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Work</p>
@@ -53,7 +40,7 @@
             <p class="text-[#bdc1ff]">last Week - 7hrs</p>
           </div>
         </div>
-        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Play</p>
@@ -63,7 +50,7 @@
             <p class="text-[#bdc1ff]">Last Week - 2hrs</p>
           </div>
         </div>
-        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -74,8 +61,8 @@
           </div>
         </div>
       </section>
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Exercise</p>
@@ -85,7 +72,7 @@
             <p class="text-[#bdc1ff]">last Week - 1hrs</p>
           </div>
         </div>
-        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Social</p>
@@ -95,7 +82,7 @@
             <p class="text-[#bdc1ff]">Last Week - 3hrs</p>
           </div>
         </div>
-        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -107,10 +94,10 @@
         </div>
       </section>
     </section>
-    <section id="weekly" class="flex flex-col gap-[20px]">
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
-          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+    <section id="weekly" class="flex flex-col gap-[20px] hidden section1">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px] section1">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl section1">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Work</p>
               <img src="images/icon-ellipsis.svg" alt="">
@@ -119,7 +106,7 @@
             <p class="text-[#bdc1ff]">last Week - 36hrs</p>
           </div>
         </div>
-        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Play</p>
@@ -129,7 +116,7 @@
             <p class="text-[#bdc1ff]">Last Week - 8hrs</p>
           </div>
         </div>
-        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -140,8 +127,8 @@
           </div>
         </div>
       </section>
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Exercise</p>
@@ -151,7 +138,7 @@
             <p class="text-[#bdc1ff]">last Week - 5hrs</p>
           </div>
         </div>
-        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Social</p>
@@ -161,7 +148,7 @@
             <p class="text-[#bdc1ff]">Last Week - 10hrs</p>
           </div>
         </div>
-        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -173,9 +160,9 @@
         </div>
       </section>
     </section>
-    <section id="monthly" class="flex flex-col gap-[20px]">
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
+    <section id="monthly" class="flex flex-col gap-[20px] hidden section1">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Work</p>
@@ -185,7 +172,7 @@
             <p class="text-[#bdc1ff]">last Week - 128hrs</p>
           </div>
         </div>
-        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Play</p>
@@ -195,7 +182,7 @@
             <p class="text-[#bdc1ff]">Last Week - 29hrs</p>
           </div>
         </div>
-        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -206,8 +193,8 @@
           </div>
         </div>
       </section>
-      <section class="grid grid-cols-3 gap-[20px]">
-        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+      <section class="grid grid-cols-3 gap-[20px] sections">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Exercise</p>
@@ -217,7 +204,7 @@
             <p class="text-[#bdc1ff]">last Week - 18hrs</p>
           </div>
         </div>
-        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Social</p>
@@ -227,7 +214,7 @@
             <p class="text-[#bdc1ff]">Last Week - 23hrs</p>
           </div>
         </div>
-        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px] section1">
           <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
             <div class="flex justify-between items-center mb-6">
               <p class="text-white">Study</p>
@@ -240,9 +227,46 @@
       </section>
     </section>
   </section>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="font-[11px] text-center text-[#f1c65b]">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[#f1c65b]">Frontend Mentor</a>. 
+    Coded by <a href="www.frontendmentor.io/profile/Pezzyace" class="text-[#f1c65b]">Peace Akehomen</a>.
   </div>
+  <style>
+    @media (width <= 375px){
+      .body{
+        margin-top: 50px;
+        padding: 0 20px 50px 20px;
+      }
+      .section1{
+        width: 100%;
+      }
+      .div1{
+        color: black;
+      }
+      .sections{
+        display: flex;
+        flex-direction: column;
+
+      }
+      .section2{
+        display: flex;
+        align-items: center;
+      }
+      .style{
+        margin: 0;
+      }
+      .style1{
+        margin: 0;
+        margin-right: 10px;
+      }
+      .style2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 15px;
+      }
+    }
+  </style>
+  <script src="script.js"></script>
 </body>
 </html>
