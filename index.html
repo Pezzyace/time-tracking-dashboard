@@ -4,120 +4,242 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); font-family: 'Rubik', sans-serif;}
+    .color{
+      color: #5847eb;
+      color: #ff8c66;
+      color: #56c2e6;
+      color: #ff5c7c;
+      color: #4acf81;
+      color: #7536d3;
+      color: #f1c65b;
+      color: #0f1424;
+      color: #1c1f4a;
+      color: #6f76c8;
+      color: #bdc1ff
+    }
   </style>
 </head>
-<body>
-  <section>
-    <div>
-      <div>
-        <img src="images/image-jeremy.png" alt="">
-        <h4>Report for</h4>
-        <p>Jeremy Robson</p>
+<body class="bg-[#0f1424] mt-[150px] font-['Rubik']">
+  <section class="w-8/12 m-auto flex gap-[20px] items-center mb-6">
+    <div class="flex flex-col bg-[#1c1f4a] rounded-xl w-[190px]">
+      <div class="bg-[#5847eb] rounded-xl px-6 py-8">
+        <img src="images/image-jeremy.png" alt="" class="w-16 border-2 border-white rounded-full mb-8">
+        <h4 class="text-[#bdc1ff] text-[11px]">Report for</h4>
+        <p class="text-[30px] text-[#fff] mb-16 leading-none font-[300] w-5/12">Jeremy Robson</p>
       </div>
-      <div>
-        <button>Daily</button>
-        <button>Weekly</button>
-        <button>Monthly</button>
+      <div class="p-6 flex flex-col items-start gap-6">
+        <button id="dailyToggle" class="text-[#6f76c8] hover:text-white">Daily</button>
+        <button id="weeklyToggle" class="text-[#6f76c8] hover:text-white">Weekly</button>
+        <button id="monthlyToogle" class="text-[#6f76c8] hover:text-white">Monthly</button>
       </div>
     </div>
-    <section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section id="daily" class="flex flex-col gap-[20px]">
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Work</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">5hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 7hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Play</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">1hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 2hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">0hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 1hrs</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Exercise</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">1hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 1hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Social</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">1hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 3hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">0hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 1hrs</p>
+          </div>
+        </div>
       </section>
     </section>
-    <section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section id="weekly" class="flex flex-col gap-[20px]">
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Work</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">32hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 36hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Play</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">10hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 8hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">4hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 7hrs</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Exercise</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">4hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 5hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Social</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">5hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 10hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">2hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 2hrs</p>
+          </div>
+        </div>
       </section>
     </section>
-    <section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+    <section id="monthly" class="flex flex-col gap-[20px]">
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#ff8c66] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Work</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">103hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 128hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#56c2e6] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Play</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">23hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 29hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#ff5c7c] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">13hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 19hrs</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <div></div>
-        <div></div>
-        <div></div>
+      <section class="grid grid-cols-3 gap-[20px]">
+        <div class="bg-[#4acf81] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Exercise</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">11hrs</h2>
+            <p class="text-[#bdc1ff]">last Week - 18hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#7536d3] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Social</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">21hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 23hrs</p>
+          </div>
+        </div>
+        <div class="bg-[#f1c65b] rounded-t-xl rounded-b-3xl w-[190px]">
+          <div class="mt-[30px] bg-[#1c1f4a] p-[20px] rounded-xl">
+            <div class="flex justify-between items-center mb-6">
+              <p class="text-white">Study</p>
+              <img src="images/icon-ellipsis.svg" alt="">
+            </div>
+            <h2 class="text-[50px] leading-none text-white">7hrs</h2>
+            <p class="text-[#bdc1ff]">Last Week - 11hrs</p>
+          </div>
+        </div>
       </section>
     </section>
   </section>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
